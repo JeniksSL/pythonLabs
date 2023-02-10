@@ -63,17 +63,20 @@ class Task3:
         initList=[]
         for i in range(length):
             initList.append(random.randint(0, 99))
-        print(initList)
+        print("Initial list:" + str(initList))
         try:
-            count=0
-            for j in initList:
-                if j % 2 == 1:
-                    initList.remove(j)
+            count = 0
+            removed = 0
+            while True:
+                if initList[count] % 2 == 1:
+                    print("Removed: " + str(initList.pop(count)))
+                    removed += 1
+                else:
                     count += 1
-                if count>=5:
-                    print(initList)
+                if removed >= 5:
+                    print("Result list:" + str(initList))
                     break
-                print(count)
+
         except Exception as e:
             print('Array have not 5 odd numbers')
 
@@ -118,7 +121,7 @@ for i in range(10):
             youngerGirl = school[i] if school[i].getAges() < youngerGirl.getAges() else youngerGirl
     midyear = (midyear*i+school[i].getAges())/(i+1)
 
-
+print("Average ages:" + str(midyear))
 print("The highest: "+higherBoy.toString())
 print("The weightiest: "+weightBoy.toString())
 print("Is same: "+str(hash(higherBoy)==hash(weightBoy)))
