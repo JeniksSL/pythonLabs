@@ -1,6 +1,6 @@
 # Task 1 (5)
-from PyLab5.Shop import Shop
-from PyLab5.Car import Car
+from PyLab4.Shop import Shop
+from PyLab4.Car import Car
 
 
 for i in range(20):
