@@ -16,6 +16,7 @@ class Car:
         self.price = "not specified"
         self.regNumber = "not specified"
 
+
     @staticmethod
     def getRandomCar():
         brand = list(Car.__brands.keys())
